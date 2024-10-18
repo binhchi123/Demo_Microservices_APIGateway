@@ -1,0 +1,29 @@
+{
+  "Routes": [
+    {
+      "UpstreamHttpMethod": [ "GET", "Post"],
+      "UpstreamPathTemplate": "/dishes",
+      "DownstreamPathTemplate": "/api/dishes",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7123
+        }
+      ]
+    },
+    {
+      "UpstreamHttpMethod": [ "GET", "Put", "Delete" ],
+      "UpstreamPathTemplate": "/dishes/{id}",
+      "DownstreamPathTemplate": "/api/dishes/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7123
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {}
+}
